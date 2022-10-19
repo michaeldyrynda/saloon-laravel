@@ -62,9 +62,7 @@ abstract class MakeCommand extends GeneratorCommand
      */
     protected function getArguments(): array
     {
-        return [
-            ['integration', InputArgument::REQUIRED, 'The related integration'],
-            ...parent::getArguments(),
-        ];
+        $item1Unpacked = parent::getArguments();
+        return array_merge([['integration', InputArgument::REQUIRED, 'The related integration']], $item1Unpacked);
     }
 }

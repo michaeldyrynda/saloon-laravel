@@ -73,7 +73,7 @@ class Saloon
      * @return void
      * @throws \ReflectionException
      */
-    public static function assertSent(string|callable $value): void
+    public static function assertSent($value): void
     {
         static::mockClient()->assertSent($value);
     }
@@ -85,7 +85,7 @@ class Saloon
      * @return void
      * @throws \ReflectionException
      */
-    public static function assertNotSent(string|callable $value): void
+    public static function assertNotSent($value): void
     {
         static::mockClient()->assertNotSent($value);
     }

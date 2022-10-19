@@ -42,7 +42,7 @@ class MockClient extends BaseMockClient
      *
      * @return \Illuminate\Contracts\Foundation\Application|mixed
      */
-    public static function resolve(): static
+    public static function resolve()
     {
         return resolve(static::class);
     }

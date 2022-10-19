@@ -43,7 +43,7 @@ class FeatureManager
      * @return self
      * @throws SaloonNoMockResponsesProvidedException
      */
-    public function bootMockingFeature(): static
+    public function bootMockingFeature(): self
     {
         $mockClient = MockClient::resolve();
 
@@ -66,7 +66,7 @@ class FeatureManager
      * @return self
      * @throws SaloonNoMockResponsesProvidedException
      */
-    public function bootRecordingFeature(): static
+    public function bootRecordingFeature(): self
     {
         if (Saloon::isRecording() === false) {
             return $this;
@@ -88,7 +88,7 @@ class FeatureManager
      *
      * @return $this
      */
-    public function bootEventTriggers(): static
+    public function bootEventTriggers(): self
     {
         $request = $this->request;
 
